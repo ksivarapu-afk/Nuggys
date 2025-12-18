@@ -23,4 +23,3 @@ if (!rootElement) {
     rootElement.innerHTML = `<div style="padding: 20px; color: red; font-size: 24px; background: white;">ERROR: ${error.message}<br/>${error.stack}</div>`
   }
 }
-
