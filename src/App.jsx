@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Feed from './components/Feed'
@@ -288,14 +288,9 @@ function Home() {
 }
 
 function App() {
-  const location = useLocation()
-  
-  // Debug: Log the current location
-  console.log('Current location:', location.pathname)
-  
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/entrance" replace />} />
+      <Route index element={<Navigate to="/entrance" replace />} />
       <Route path="/entrance" element={<Entrance />} />
       <Route path="/enter-email" element={<EnterEmail />} />
       <Route path="/account-creation" element={<EnterEmail />} />
