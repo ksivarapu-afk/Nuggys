@@ -13,7 +13,7 @@ if (!rootElement) {
     
     root.render(
       <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/Nuggys">
           <App />
         </BrowserRouter>
       </React.StrictMode>
